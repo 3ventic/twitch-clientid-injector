@@ -14,4 +14,4 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function (details) {
         value: cid
     });
     return { requestHeaders: details.requestHeaders };
-}, { urls: [ "<all_urls>" ] }, [ 'requestHeaders', 'blocking' ]);
+}, { urls: [ "<all_urls>" ], types: [ "main_frame" ] }, [ 'requestHeaders', 'blocking' ]);
