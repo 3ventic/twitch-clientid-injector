@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+
+    "name": "Twitch Client ID Injector",
+    "description": "Automatically includes your client ID whenever you use the Twitch API in your browser",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "options.html"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "webRequest",
+        "webRequestBlocking",
+        "https://api.twitch.tv/"
+    ],
+    "background": {
+        "scripts": [
+            "injector.js"
+        ]
+    },
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "content_security_policy": "script-src 'self' chrome-extension-resource: 'unsafe-eval'; default-src 'self'"
+}
