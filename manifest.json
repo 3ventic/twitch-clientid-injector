@@ -15,8 +15,7 @@
         "webRequest",
         "webRequestBlocking",
         "https://api.twitch.tv/",
-        "https://tmi.twitch.tv/",
-        "https://api.twitch.tv/"
+        "https://tmi.twitch.tv/"
     ],
     "background": {
         "scripts": [
