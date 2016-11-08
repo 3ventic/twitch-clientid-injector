@@ -3,7 +3,7 @@
 
     "name": "Twitch Client ID Injector",
     "description": "Automatically includes your client ID whenever you use the Twitch API in your browser",
-    "version": "1.1",
+    "version": "1.1.1",
 
     "browser_action": {
         "default_icon": "icon.png",
@@ -14,6 +14,8 @@
         "activeTab",
         "webRequest",
         "webRequestBlocking",
+        "https://api.twitch.tv/",
+        "https://tmi.twitch.tv/",
         "https://api.twitch.tv/"
     ],
     "background": {
@@ -25,5 +27,5 @@
         "page": "options.html",
         "chrome_style": true
     },
-    "content_security_policy": "script-src 'self' chrome-extension-resource: 'unsafe-eval'; default-src 'self'"
+    "content_security_policy": "script-src 'self'; default-src 'self'"
 }
