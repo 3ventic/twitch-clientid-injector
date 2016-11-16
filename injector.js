@@ -1,12 +1,12 @@
 var cid = '';
-var acceptHeader = 'application/vnd.twitchtv.3+json';
+var acceptHeader = 'application/vnd.twitchtv.v3+json';
 function getOptions() {
     chrome.storage.sync.get({
         cid: '',
 		version: 3
     }, function (data) {
         cid = data.cid;
-		acceptHeader = 'application/vnd.twitchtv.' + data.version + '+json';
+		acceptHeader = 'application/vnd.twitchtv.v' + data.version + '+json';
     });
 }
 getOptions();
