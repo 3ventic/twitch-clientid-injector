@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <title>Set your Client ID</title>
-<input type="text" id="cid" name="cid" title="Client ID">
+<input type="text" id="cid" name="cid" placeholder="Client ID" title="Client ID">
+<input type="text" id="token" name="token" placeholder="OAuth token" title="Authorization Token">
 <br>
 <select id="version" name="version" title="API version">
-  <option value="3" selected>v3</option>
+  <option value="0" selected>Default</option>
+  <option value="3">v3</option>
+  <option value="4">v4</option>
   <option value="5">v5</option>
 </select>
 <button id="save">Save</button>
