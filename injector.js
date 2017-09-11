@@ -45,10 +45,16 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function (details) {
 			value: acceptHeaderReal
 		});
 	}
-    if (kraken_token.length > 0) {
+    if (!isHelix && kraken_token.length > 0) {
         details.requestHeaders.push({
             name: 'Authorization',
-            value: isHelix ? 'Bearer ' + helix_token : 'OAuth ' + kraken_token
+            value: 'OAuth ' + kraken_token
+        })
+    }
+    if (isHelix && helix_token.length > 0) {
+        details.requestHeaders.push({
+            name: 'Authorization',
+            value: 'Bearer ' + helix_token
         })
     }
     return { requestHeaders: details.requestHeaders };

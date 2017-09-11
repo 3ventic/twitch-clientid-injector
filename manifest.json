@@ -3,7 +3,7 @@
 
     "name": "Twitch Client ID Injector",
     "description": "Automatically includes your client ID whenever you use the Twitch API in your browser",
-    "version": "1.4",
+    "version": "1.4.1",
     "icons": {
         "150": "icon.png"
     },
