@@ -1,14 +1,35 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="options.css"></link>
 <title>Set your Client ID</title>
-<input type="text" id="cid" name="cid" placeholder="Client ID" title="Client ID">
-<input type="text" id="token" name="token" placeholder="OAuth token" title="Authorization Token">
-<br>
-<select id="version" name="version" title="API version">
-  <option value="0" selected>Default</option>
-  <option value="3">v3</option>
-  <option value="4">v4</option>
-  <option value="5">v5</option>
-</select>
-<button id="save">Save</button>
-<span id="status"></span>
+
+<div class="opt">
+  <label for="cid">Client ID</label>
+  <input type="text" id="cid" name="cid" placeholder="Client ID" title="Client ID">
+</div>
+
+<div class="opt">
+  <label for="kraken-token">Kraken OAuth</label>
+  <input type="text" id="kraken-token" name="kraken-token" placeholder="OAuth token" title="Authorization Token for Kraken">
+</div>
+
+<div class="opt">
+  <label for="helix-token">Helix OAuth</label>
+  <input type="text" id="helix-token" name="helix-token" placeholder="OAuth token" title="Authorization Token for Helix">
+</div>
+
+<div class="opt">
+  <label for="version">Kraken version</label>
+  <select id="version" name="version" title="API version">
+    <option value="0" selected>Default</option>
+    <option value="3">v3</option>
+    <option value="4">v4</option>
+    <option value="5">v5</option>
+  </select>
+</div>
+
+<div>
+  <button id="save">Save</button>
+  <span id="status"></span>
+</div>
+
 <script src="options.js"></script>

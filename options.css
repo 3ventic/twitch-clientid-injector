@@ -1,0 +1,4 @@
+body { width: 20em; }
+div { padding-top: 0.3em; }
+div.opt { text-align: right; }
+input { max-width: 7em; }
