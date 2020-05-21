@@ -1,40 +1,31 @@
 {
-    "manifest_version": 2,
+	"manifest_version": 2,
 
-    "name": "Twitch Client ID Injector",
-    "description": "Automatically includes your client ID whenever you use the Twitch API in your browser",
-    "version": "1.4.1",
-    "icons": {
-        "150": "icon.png"
-    },
+	"name": "Twitch Client ID Injector",
+	"description": "Automatically includes your client ID whenever you use the Twitch API in your browser",
+	"version": "1.4.2",
+	"icons": {
+		"150": "icon.png"
+	},
 
-    "browser_action": {
-        "default_icon": {
-            "150": "icon.png"
-        },
-        "default_popup": "options.html"
-    },
-    "permissions": [
-        "storage",
-        "activeTab",
-        "webRequest",
-        "webRequestBlocking",
-        "https://api.twitch.tv/",
-        "https://tmi.twitch.tv/"
-    ],
-    "background": {
-        "scripts": [
-            "injector.js"
-        ]
-    },
-    "options_ui": {
-        "page": "options.html",
-        "chrome_style": true
-    },
-    "content_security_policy": "script-src 'self'; default-src 'self'",
-    "applications": {
-        "gecko": {
-            "strict_min_version": "52.0a1"
-        }
-    }
+	"browser_action": {
+		"default_icon": {
+			"150": "icon.png"
+		},
+		"default_popup": "options.html"
+	},
+	"permissions": ["storage", "webRequest", "webRequestBlocking", "https://api.twitch.tv/", "https://tmi.twitch.tv/"],
+	"background": {
+		"scripts": ["injector.js"]
+	},
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true
+	},
+	"content_security_policy": "script-src 'self'; default-src 'self'",
+	"applications": {
+		"gecko": {
+			"strict_min_version": "52.0a1"
+		}
+	}
 }
